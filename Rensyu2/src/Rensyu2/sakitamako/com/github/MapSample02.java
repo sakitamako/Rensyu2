@@ -8,7 +8,7 @@ public class MapSample02 {
     public static void main(String[] args) {
     	Map<String, String> map = new HashMap<String, String>();
 
-        //値のセットは put メソッドを利用
+        //値のセットは put メソッドを利用する
         map.put("key1","value1");
         map.put("key2","value2");
         map.put("key3","value3");
@@ -22,14 +22,14 @@ public class MapSample02 {
         String valueNull = map.get("key6"); //存在しない key の場合は null
         System.out.println(valueNull);
 
-        //map に該当する key が存在するか否かチェックすることも可能
+        //map に該当する key が存在するか否かチェックすることも可能です
         if (map.containsKey("key1")) {
         	System.out.println("key1は存在します");
         } else {
         	System.out.println("key1は存在しません");
         }
         
-        //拡張 for 文を利用してすべて情報を取得する
+        //拡張 for 文を利用してすべて情報を取得する！
         for (Map.Entry<String,String> e : map.entrySet()) {
             System.out.println(e.getKey() + ":" + e.getValue());
         }
